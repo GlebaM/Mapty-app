@@ -109,7 +109,7 @@ a:visited {
 .workout__unit {
   font-size: 1.1rem;
   color: var(--color-light--1);
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 800;
 }
 
