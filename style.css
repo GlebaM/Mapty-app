@@ -95,6 +95,15 @@ a:visited {
   align-items: baseline;
 }
 
+.workout__functionality {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  /* column-gap: 15px; */
+  margin-top: 0.4rem;
+  grid-column: span 2;
+}
+
 .workout__icon {
   font-size: 1.8rem;
   margin-right: 0.2rem;
@@ -113,6 +122,19 @@ a:visited {
   font-weight: 800;
 }
 
+.management {
+  display: flex;
+  font-style: inherit;
+  padding: 1px 2.5rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.management__btn--deleteAll {
+  margin-right: auto;
+  font-size: inherit;
+}
+
 .form {
   background-color: var(--color-dark--2);
   border-radius: 5px;
@@ -121,10 +143,11 @@ a:visited {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
   gap: 0.5rem 2.5rem;
 
   /* Match height and activity boxes */
-  height: 9.25rem;
+  height: fit-content;
   transition: all 0.5s, transform 1ms;
 }
 
@@ -167,12 +190,32 @@ a:visited {
   background-color: #fff;
 }
 
-.form__btn {
+.form__btn--hidden {
   display: none;
+}
+
+.form__error {
+  grid-column: span 2;
+  /* color: rgba(248, 27, 27, 0.877); */
+  color: var(--color-brand--1);
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+  margin-bottom: 0;
+  margin-top: 0.5rem;
+}
+.form__error.hidden {
+  display: none;
+  transform: scale(0.6) translateY(-20%);
+  height: 0;
+  padding: 0 2.25rem;
+  margin-top: 0;
+  opacity: 0;
 }
 
 .copyright {
   margin-top: auto;
+  padding-top: 2rem;
   font-size: 1.3rem;
   text-align: center;
   color: var(--color-light--1);
@@ -217,4 +260,29 @@ a:visited {
 }
 .cycling-popup .leaflet-popup-content-wrapper {
   border-left: 5px solid var(--color-brand--1);
+}
+
+/* Buttons */
+.btn {
+  background-color: #384047;
+  /* background-color: #42484d; */
+  color: white;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  padding: 0.3rem 1rem;
+  transition: all 0.15s;
+}
+/* .btn:hover {
+  transform: 
+} */
+
+.btn:active {
+  transform: translateY(0px) translateY(-1px);
+  /* outline: 2px solid white;
+  outline: 4px solid red;
+  outline-offset: 3px; */
+  box-shadow: 0 5px 15px 5px rgba(87, 83, 83, 0.329),
+    0 4px 8px 3px rgba(0, 0, 0, 0.19);
 }

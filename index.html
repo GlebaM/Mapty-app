@@ -45,7 +45,12 @@
           <label class="form__label">Elev Gain</label>
           <input class="form__input form__input--elevation" placeholder="meters" />
         </div>
-        <button class="form__btn">OK</button>
+        <button class="form__btn--hidden">OK</button>
+        <div class="form__error hidden">
+          <p>
+            Error occurs. Make sure that the input you provide is a positive number.
+          </p>
+        </div>
       </form>
 
       <!-- <li class="workout workout--running" data-id="1234567890">
@@ -70,9 +75,9 @@
           <span class="workout__value">178</span>
           <span class="workout__unit">spm</span>
         </div>
-      </li>
+      </li>-->
 
-      <li class="workout workout--cycling" data-id="1234567891">
+      <!-- <li class="workout workout--cycling" data-id="1234567891">
         <h2 class="workout__title">Cycling on April 5</h2>
         <div class="workout__details">
           <span class="workout__icon">🚴‍♀️</span>
@@ -94,9 +99,24 @@
           <span class="workout__value">223</span>
           <span class="workout__unit">m</span>
         </div>
+        <div class="workout__functionality">
+          <button class="workout__btn-edit btn">EDIT</button>
+          <button class="workout__btn-delete btn">DELETE</button>
+        </div>
       </li> -->
-    </ul>
 
+
+      <div class="management">
+        <button class="management__btn--deleteAll btn">Delete all workouts</button>
+        <label for="sort-by">Sort by : &nbsp;</label>
+        <select name="sortBy" id="sort-by" class="management__sort-by">
+          <option value=""></option>
+          <option value="">Distance</option>
+          <option value="">Duration</option>
+          <option value="">Type</option>
+        </select>
+      </div>
+    </ul>
     <p class="copyright">
       &copy; Copyright by
       <a class="twitter-link" target="_blank" href="https://twitter.com/jonasschmedtman">Jonas Schmedtmann</a>. Use
